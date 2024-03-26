@@ -1,8 +1,8 @@
 const {Router} = require('express')
 
 const router = Router()
-router.get('/userName', (req, res) => {
-    res.send('username page')
+router.get('/users', (req, res) => {
+    res.render('users')
 })
 
 router.get('/profile', (req, res) => {
