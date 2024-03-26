@@ -3,8 +3,28 @@ const {Router} = require('express')
 const router = Router()
 
 router.get('/', (req,res)=>{
-    const title ='index page'
-    res.render('index', {title: title})
+   let isActive = false
+   
+   const users = [
+    {
+        id: 1,
+        name: "ryan",
+        lastname: "perez"
+    },
+    {
+        id: 2,
+        name: "joe",
+        lastname:"mc ,illan"
+    }
+
+    ]
+
+
+
+    res.render('index', {
+        title: 'Index Page',
+        isActive
+    })
 })
 
 router.get('/about', (req, res) => {
