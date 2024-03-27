@@ -2,10 +2,19 @@
 
 <h1><%= title %> </h1>
 <p><%= new Date() %></p>
+
+<ul>
+    <% for(let i = 0; i < users.length; i++){ %>
+        <li><%= users[i].name %> <%= users[i].lastname %></li>
+    <% } %>
+</ul>
+
 <% if (isActive){ %>
     <p>El servidor esta activo</p>
 <% }else{ %>
     <p>El servidor esta inactivo</p>
 <% } %>
+
+
 
 <%- include('partials/footer'); %>
